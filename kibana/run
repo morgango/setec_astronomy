@@ -1,0 +1,1 @@
+docker run -it --rm -e ELASTICSEARCH=http://admin:password@$(boot2docker ip):9200 -p 5601:5601 --name kb seatec_kibana

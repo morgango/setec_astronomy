@@ -1,0 +1,7 @@
+cluster.name: seatec_astronomy
+
+path:
+  data: /data/data
+  work: /data/work
+
+http.cors.endabled: true
