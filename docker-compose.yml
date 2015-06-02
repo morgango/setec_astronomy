@@ -1,11 +1,11 @@
-master:
+client:
     image: elasticsearch:1.5
     volumes:
         - ./data:/data
     ports:
         - "9200:9200"
         - "9300:9300"
-    command: /usr/share/elasticsearch/bin/elasticsearch -Des.config=/data/master.yml
+    command: /usr/share/elasticsearch/bin/elasticsearch -Des.config=/data/client.yml
 
 e1:
     image: elasticsearch:1.5
@@ -34,22 +34,21 @@ e3:
         - "9303:9300"
     command: /usr/share/elasticsearch/bin/elasticsearch -Des.config=/data/elasticsearch.yml
 
-client:
+master:
     image: elasticsearch:1.5
     volumes:
         - ./data:/data
     ports:
         - "9205:9200"
         - "9305:9300"
-    command: /usr/share/elasticsearch/bin/elasticsearch -Des.config=/data/client.yml
+    command: /usr/share/elasticsearch/bin/elasticsearch -Des.config=/data/master.yml
 
 kb:
     build: ./kibana/
+    volumes:
+        - ./data:/data
     ports:
         - "5601:5601"
-    environment:
-        _ ELASTICSEARCH_PORT_9200_TCP_PORT: 9200
-        _ ELASTICSEARCH_PORT_9200_TCP_ADDR: http://client
-        _ KIBANA_INDEX:  flights
     links:
         - client
+    command: /opt/kibana/bin/kibana --config /data/kibana.yml

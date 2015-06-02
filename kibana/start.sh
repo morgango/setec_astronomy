@@ -14,6 +14,10 @@ export REQUEST_TIMEOUT=${REQUEST_TIMEOUT:-300000}
 export SHARD_TIMEOUT=${SHARD_TIMEOUT:-0}
 export VERIFY_SSL=${VERIFY_SSL:-true}
 
+env | grep ELASTICSEARCH | sort
+
+cat /etc/hosts
+
 REPLACE=(
  "s|^elasticsearch_url:.*$|elasticsearch_url: \"$ELASTICSEARCH\"|;"
  "s|^kibana_index:.*$|kibana_index: \"$KIBANA_INDEX\"|;"
@@ -24,5 +28,7 @@ REPLACE=(
 )
 
 sed -i.bak -e "${REPLACE[*]}" /opt/kibana/config/kibana.yml
+
+cat /opt/kibana/config/kibana.yml | grep elasticsearch_url
 
 /opt/kibana/bin/kibana
