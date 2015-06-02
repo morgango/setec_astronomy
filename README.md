@@ -1,6 +1,6 @@
-# seatec_astronomy
+# setec_astronomy
 
-![seatec_astronomy](https://github.com/morgango/seatec_astronomy/seatec.gif)
+![setec_astronomy](https://github.com/morgango/seatec_astronomy/setec.gif)
 
 # Too Many Secrets
 
