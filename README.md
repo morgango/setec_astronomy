@@ -1,7 +1,5 @@
 ![setec_astronomy](https://github.com/morgango/seatec_astronomy/blob/master/setec.gif)
 
-# Too Many Secrets
-
 There are a lot of interesting features in [Elasticsearch](http://elastic.co) and the [ELK stack](https://www.elastic.co/webinars/introduction-elk-stack).  Really, really, interesting features that you need to get your hands on.
 
 However, for you to get a real understanding of what it can do, you need to get your hands on a fully featured, functioning version of the software.  Not a demo, not a simplification, but an actual cluster that you can touch and feel and easily expand if that is something you are interested in. 
