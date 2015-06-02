@@ -1,5 +1,3 @@
-# setec_astronomy
-
 ![setec_astronomy](https://github.com/morgango/seatec_astronomy/blob/master/setec.gif)
 
 # Too Many Secrets
@@ -13,10 +11,10 @@ Well, this project does just that.  It uses `docker` and `docker-configure` to b
 
 ## What you need to do
 
-1. [Download and Install Docker](https://docs.docker.com/installation/)
-1. [Download and Install Docker Compose](https://docs.docker.com/compose/install/)
+1. Download and Install [Docker](https://docs.docker.com/installation/)
+1. Download and Install [Docker Compose](https://docs.docker.com/compose/install/)
 3. Download and Install the command line completions for both tools (optional).
-4. Clone this repo (https://github.com/morgango/seatec_astronomy.git)
+4. Clone [this repo](https://github.com/morgango/seatec_astronomy.git)
 5. Move into the directory you just created.
 6. Run `docker-compose up`
 
@@ -29,7 +27,7 @@ There will be several containers running:
 
 * **client** - an Elasticearch client node with port `9200` exposed to the world.  This is how `curl` or Kibana (and anythnig else)will connect to the cluster.
 * **master** - an Elasticearch master client node, mostly for show.
-* **mes<n>** - an Elasticearch data node.  By default there are 3 data nodes, this could easily be expanded if necessary 
+* **es<n>** - an Elasticearch data node.  By default there are 3 data nodes, this could easily be expanded if necessary 
 * **kb** - a Kibana instance with port `5601` exposed to the world.  You can point your web browser at this to hit the cluster.
 
 ### Configuration
