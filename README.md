@@ -23,7 +23,7 @@ If all goes well, you should see the log output from the various containers all 
 
 There will be several containers running:
 
-* **client** - an Elasticearch client node with port `9200` exposed to the world.  This is how `curl` or Kibana (or anythnig else) will connect to the cluster.
+* **client** - an Elasticearch client node with port `9200` exposed to the world.  This is how `curl` or Kibana (or anything else) will connect to the cluster.
 * **master** - an Elasticearch master client node, mostly for show.
 * **es<n>** - an Elasticearch data node.  By default there are 3 data nodes, this could easily be expanded if necessary 
 * **kb** - a Kibana instance with port `5601` exposed to the world.  You can point your web browser at this to hit the cluster.
