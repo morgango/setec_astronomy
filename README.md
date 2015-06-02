@@ -37,7 +37,7 @@ All the nodes can be configured from outside the containers.  In the repo, you w
 * **es<n>** - uses `data/elasticsearch.yml`
 * **kb** - uses `data/kibana.yml`
 
-The nodes should make a `data/data/seatec_astronomy/` that will hold all the physical data created by the nodes, which is very useful for examining what is happening under the hood.  If you restart the containers, it will keep the underlying data
+The nodes should make a `data/data/setec_astronomy/` that will hold all the physical data created by the nodes, which is very useful for examining what is happening under the hood.  If you restart the containers, it will keep the underlying data
 
 ## Hints
 
