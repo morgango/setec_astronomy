@@ -9,6 +9,8 @@ Well, this project does just that.  It uses `docker` and `docker-configure` to b
 
 ## What you need to do
 
+![screenshot](https://github.com/morgango/seatec_astronomy/blob/master/screen.gif)
+
 1. Download and Install [Docker](https://docs.docker.com/installation/)
 1. Download and Install [Docker Compose](https://docs.docker.com/compose/install/)
 3. Download and Install the command line completions for both tools (optional).
@@ -36,6 +38,8 @@ All the nodes can be configured from outside the containers.  In the repo, you w
 * **master** -  uses `data/master.ymli`
 * **es<n>** - uses `data/elasticsearch.yml`
 * **kb** - uses `data/kibana.yml`
+
+**NOTE**: All of these configuration options are specified in the  `docker-compose.yml` file.  You can point them to any location in the  `data` directory at run time.
 
 The nodes should make a `data/data/setec_astronomy/` that will hold all the physical data created by the nodes, which is very useful for examining what is happening under the hood.  If you restart the containers, it will keep the underlying data
 
