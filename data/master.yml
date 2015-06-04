@@ -1,4 +1,4 @@
-cluster.name: seatec_astronomy
+cluster.name: setec_astronomy
 
 node.master: true
 node.data: false

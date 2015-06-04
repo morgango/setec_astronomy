@@ -52,3 +52,4 @@ kb:
     links:
         - client
     command: /opt/kibana/bin/kibana --config /data/kibana.yml
+    #command: /opt/kibana/bin/kibana
