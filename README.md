@@ -54,8 +54,8 @@ docker-compose run <container> <command>
 
 ``` bash
 # open a shell in one of the running containers, so that multiple commands can be run
-docker-compose run <container> bash
-# It may not display the shell right away, if not just press Enter
+docker exec -it <container>_1 bash
+# NOTE: This is a `docker` command, not a `docker-compose` command.
 ```
 
 ###Restart all containers
