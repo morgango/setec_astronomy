@@ -49,7 +49,8 @@ The nodes should make a `data/data/setec_astronomy/` that will hold all the phys
 
 ``` bash
 # run a one-off command and send the output to the screen
-docker-compose run <container> <command>
+docker exec -it <container>_1 bash
+# NOTE: This is a `docker` command, not a `docker-compose` command.
 ```
 
 ``` bash
