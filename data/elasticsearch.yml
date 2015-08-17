@@ -4,4 +4,6 @@ path:
   data: /data/data
   work: /data/work
 
+marvel.agent.exporter.es.hosts: [ "http://es_admin:password@192.168.59.103:9200" ]
+
 http.cors.endabled: true

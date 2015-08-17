@@ -1,0 +1,16 @@
+single:
+    image: elasticsearch:latest
+    volumes:
+        - ./data:/data
+    ports:
+        - "9200:9200"
+        - "9300:9300"
+    command: sh -c 'plugin -i elasticsearch/license/latest\
+                && plugin -i elasticsearch/shield/latest\
+                && plugin -i elasticsearch/marvel/latest\
+                && plugin -i elasticsearch/watcher/latest\
+                && '/usr/share/elasticsearch/bin/elasticsearch\
+                   -Des.cluster.name="setec_astronomy"\
+                   -Des.node.master="true"\
+                   -Des.node.data="true"\
+                   -Des.node.client="false"''

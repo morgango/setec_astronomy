@@ -1,9 +1,8 @@
-#FROM debian:jessie
-
-FROM java:openjdk-7-jdk
+FROM java:8-jre
 
 RUN apt-get update && \
-    apt-get install -y openjdk-7-jre wget
+    apt-get install -y wget
+    # apt-get install -y openjdk-7-jre wget
 
 ENV JAVA_HOME /usr/lib/jvm/java-6-openjdk-amd64
 ENV KB_VERSION 4.0.2

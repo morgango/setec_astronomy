@@ -1,0 +1,12 @@
+single:
+    image: elasticsearch:latest
+    volumes:
+        - ./data:/data
+    ports:
+        - "9200:9200"
+        - "9300:9300"
+    command: /usr/share/elasticsearch/bin/elasticsearch
+                   -Des.cluster.name="setec_astronomy"
+                   -Des.node.master="true"
+                   -Des.node.data="true"
+                   -Des.node.client="false"

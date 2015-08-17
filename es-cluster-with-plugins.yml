@@ -1,0 +1,95 @@
+client:
+    image: elasticsearch:latest
+    volumes:
+        - ./data:/data
+    ports:
+        - "9200:9200"
+        - "9300:9300"
+    command: sh -c 'plugin -i elasticsearch/license/latest\
+                && plugin -i elasticsearch/shield/latest\
+                && plugin -i elasticsearch/marvel/latest\
+                && plugin -i elasticsearch/watcher/latest\
+                && '/usr/share/elasticsearch/bin/elasticsearch\
+                   -Des.cluster.name="setec_astronomy"\
+                   -Des.node.master="false"\
+                   -Des.node.data="false"\
+                   -Des.node.client="true"''
+
+e1:
+    image: elasticsearch:latest
+    volumes:
+        - ./data:/data
+    ports:
+        - "9201:9200"
+        - "9301:9300"
+    command: sh -c 'plugin -i elasticsearch/license/latest\
+                && plugin -i elasticsearch/shield/latest\
+                && plugin -i elasticsearch/marvel/latest\
+                && plugin -i elasticsearch/watcher/latest\
+                && '/usr/share/elasticsearch/bin/elasticsearch\
+                   -Des.cluster.name="setec_astronomy"\
+                   -Des.node.master="false"\
+                   -Des.node.data="true"\
+                   -Des.node.client="false"''
+
+e2:
+    image: elasticsearch:latest
+    volumes:
+        - ./data:/data
+    ports:
+        - "9202:9200"
+        - "9302:9300"
+    command: sh -c 'plugin -i elasticsearch/license/latest\
+                && plugin -i elasticsearch/shield/latest\
+                && plugin -i elasticsearch/marvel/latest\
+                && plugin -i elasticsearch/watcher/latest\
+                && '/usr/share/elasticsearch/bin/elasticsearch\
+                   -Des.cluster.name="setec_astronomy"\
+                   -Des.node.master="false"\
+                   -Des.node.data="true"\
+                   -Des.node.client="false"''
+
+e3:
+    image: elasticsearch:latest
+    volumes:
+        - ./data:/data
+    ports:
+        - "9203:9200"
+        - "9303:9300"
+    command: sh -c 'plugin -i elasticsearch/license/latest\
+                && plugin -i elasticsearch/shield/latest\
+                && plugin -i elasticsearch/marvel/latest\
+                && plugin -i elasticsearch/watcher/latest\
+                && '/usr/share/elasticsearch/bin/elasticsearch\
+                   -Des.cluster.name="setec_astronomy"\
+                   -Des.node.master="false"\
+                   -Des.node.data="true"\
+                   -Des.node.client="false"''
+
+master:
+    image: elasticsearch:latest
+    volumes:
+        - ./data:/data
+    ports:
+        - "9205:9200"
+        - "9305:9300"
+    command: sh -c 'plugin -i elasticsearch/license/latest\
+                && plugin -i elasticsearch/shield/latest\
+                && plugin -i elasticsearch/marvel/latest\
+                && plugin -i elasticsearch/watcher/latest\
+                && '/usr/share/elasticsearch/bin/elasticsearch\
+                   -Des.cluster.name="setec_astronomy"\
+                   -Des.node.master="true"\
+                   -Des.node.data="true"\
+                   -Des.node.client="false"''
+
+kb:
+    image: kibana:latest
+    volumes:
+        - ./data:/data
+    ports:
+        - "5601:5601"
+    links:
+        - client
+    command: /bin/sleep infinity
+    #command: /opt/kibana/bin/kibana --config /data/kibana.yml
