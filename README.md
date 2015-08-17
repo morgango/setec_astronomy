@@ -43,19 +43,21 @@ There are a number of .ym
 It is probably easiest to do your configuration in the command line in the **YML** files themselves.  For example,
 
 ```bash
-    command: /usr/share/elasticsearch/bin/elasticsearch 
-           -Des.cluster.name="setec_astronomy" 
-           -Des.node.master="true" 
-           -Des.node.data="true" 
-           -Des.node.client="false"``` 
+command: /usr/share/elasticsearch/bin/elasticsearch 
+       -Des.cluster.name="setec_astronomy" 
+       -Des.node.master="true" 
+       -Des.node.data="true" 
+       -Des.node.client="false"
+``` 
 
 In this case, Elasticsearch can be configured without requiring a configuration file to be added to the Dockerfile or image itself, which allows us to use the official version.
 
 If you need to provide a configuration file, you can use a command like:
 
 ```bash
-    command: /usr/share/elasticsearch/bin/elasticsearch 
-        -Des.config=/data/elasticsearch.yml```
+command: /usr/share/elasticsearch/bin/elasticsearch 
+       -Des.config=/data/elasticsearch.yml
+```
 
 This will allow you to provide configuration without having to create your own Dockerfile. Also, note that the image has a [volume](https://docs.docker.com/userguide/dockervolumes/) mounted as the /data directory which is already configured.  While unfortunately named, it does allow some visibility outside the container, which can be very useful.
 
