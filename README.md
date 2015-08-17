@@ -116,6 +116,8 @@ docker-compose build
 
 ## Troubleshooting
 
-`kb_1     | {"@timestamp":"2015-06-02T19:28:22.300Z","level":"info","message":"Unable to connect to elasticsearch at http://client:9200. Retrying in 2.5 seconds.","node_env":"production"}`
+```bash
+kb_1     | {"@timestamp":"2015-06-02T19:28:22.300Z","level":"info","message":"Unable to connect to elasticsearch at http://client:9200. Retrying in 2.5 seconds.","node_env":"production"}
+```
 
 It is not uncommon that the underlying data becomes corrupted if you are bringing the systems up and down a lot.  Delete the `data/data/setec_astronomy/` directory and reload your data.
