@@ -31,12 +31,12 @@ There will be several containers running:
 ## Different Options
 
 There are a number of .ym
-* es-single-install-only.yml will build a single container that has Elasticsearch installed, but will not be running.  You will need to log into the machine and run the command line yourself. 
-* es-single-no-plugins.yml will build a single container that has Elasticsearch installed and running with no plugins.
-* es-single-with-plugins.yml will build a single container that has Elasticsearch installed and running with all the Elastic commercial plugins (Shield, Watcher, Marvel).
-* es-cluster-install-only.yml will build a cluster container that has the Elasticsearch and Kibana installed, but will not be running.  You will need to log into the machine, and run the command lines yourself. 
-* es-cluster-no-plugins.yml will build a cluster that has Elasticsearch and Kibana installed and running with no plugins. This should be be fully functional right out-of-the-box.
-* es-cluster-with-plugins.yml will build a cluster container that has Elasticsearch and Kibana installed and running with all the Elastic commercial plugins (Shield, Watcher, Marvel). This cluster is not in a useable state, because the commercial plugins are not configured.  You will need to log on to each machine and confgure them properly.
+* `es-single-install-only.yml` will build a single container that has Elasticsearch installed, but will not be running.  You will need to log into the machine and run the command line yourself. 
+* `es-single-no-plugins.yml` will build a single container that has Elasticsearch installed and running with no plugins.
+* `es-single-with-plugins.yml` will build a single container that has Elasticsearch installed and running with all the Elastic commercial plugins (Shield, Watcher, Marvel).
+* `es-cluster-install-only.yml` will build a cluster container that has the Elasticsearch and Kibana installed, but will not be running.  You will need to log into the machine, and run the command lines yourself. 
+* `es-cluster-no-plugins.yml` will build a cluster that has Elasticsearch and Kibana installed and running with no plugins. This should be be fully functional right out-of-the-box.
+* `es-cluster-with-plugins.yml` will build a cluster container that has Elasticsearch and Kibana installed and running with all the Elastic commercial plugins (Shield, Watcher, Marvel). This cluster is not in a useable state, because the commercial plugins are not configured.  You will need to log on to each machine and confgure them properly.
 
 ### Configuration
 
