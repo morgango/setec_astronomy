@@ -30,7 +30,8 @@ There will be several containers running:
 
 ## Different Options
 
-There are a number of .ym
+There are a number of .yml files that can be used to build Elasticsearch clusters.
+
 * `es-single-install-only.yml` will build a single container that has Elasticsearch installed, but will not be running.  You will need to log into the machine and run the command line yourself. 
 * `es-single-no-plugins.yml` will build a single container that has Elasticsearch installed and running with no plugins.
 * `es-single-with-plugins.yml` will build a single container that has Elasticsearch installed and running with all the Elastic commercial plugins (Shield, Watcher, Marvel).
@@ -38,9 +39,11 @@ There are a number of .ym
 * `es-cluster-no-plugins.yml` will build a cluster that has Elasticsearch and Kibana installed and running with no plugins. This should be be fully functional right out-of-the-box.
 * `es-cluster-with-plugins.yml` will build a cluster container that has Elasticsearch and Kibana installed and running with all the Elastic commercial plugins (Shield, Watcher, Marvel). This cluster is not in a useable state, because the commercial plugins are not configured.  You will need to log on to each machine and confgure them properly.
 
+These are fed to the `docker-compose` tool with a command line like `docker-compose --file=<filename you are using> up`
+
 ### Configuration
 
-It is probably easiest to do your configuration in the command line in the **YML** files themselves.  For example,
+It is probably easiest to do your configuration in the command line in the docker compose **YML** files themselves.  For example:
 
 ```bash
 command: /usr/share/elasticsearch/bin/elasticsearch 
