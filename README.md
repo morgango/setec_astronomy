@@ -39,7 +39,8 @@ There are a number of .yml files that can be used to build Elasticsearch cluster
 * `es-cluster-no-plugins.yml` will build a cluster that has Elasticsearch and Kibana installed and running with no plugins. This should be be fully functional right out-of-the-box.
 * `es-cluster-with-plugins.yml` will build a cluster container that has Elasticsearch and Kibana installed and running with all the Elastic commercial plugins (Shield, Watcher, Marvel). This cluster is not in a useable state, because the commercial plugins are not configured.  You will need to log on to each machine and confgure them properly.
 
-These are fed to the `docker-compose` tool with a command line like `docker-compose --file=<filename you are using> up`
+These are fed to the `docker-compose` tool with a command line like 
+```docker-compose --file=<filename you are using> up```
 
 ### Configuration
 
